@@ -11,9 +11,9 @@ WIDTH, HEIGHT = 1920, 1080
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 clock = pygame.time.Clock()
 
-sun = Body(pos=[1000, 500], vel=[0, 0], mass=100000, radius=30)
-earth = Body(pos=[300, 100], vel=[0, 22], mass=1, radius=10)
-planet_x = Body(pos=[200, 500], vel=[0, 13], mass=1000, radius=20)
+sun = Body(pos=[400, 300], vel=[0, 0], mass=200000, radius=30)
+earth = Body(pos=[200, 300], vel=[0, 40], mass=100000, radius=20)
+planet_x = Body(pos=[300, 100], vel=[45, 0], mass=1, radius=10)
 
 sun.colour = (255, 215, 0)
 earth.colour = (100, 149, 237)
@@ -21,7 +21,7 @@ planet_x.colour = (130, 121, 198)
 
 bodies = [sun, earth, planet_x]
 
-dt = 0.4
+dt = 0.1
 
 running = True
 
@@ -55,4 +55,4 @@ while running:
     pygame.display.flip()
 
     #fps
-    clock.tick(60)
+    clock.tick(120)
